@@ -1,4 +1,4 @@
-from pynput import keyboard
+rt keyboard
 from sonidosSeleccion import sound
 hystorial = []
 times = 0
@@ -14,9 +14,11 @@ def al_presionar(key):
         if tecla:
             hystorial.append(tecla)
             hystorialVeredict = "".join(hystorial)
-            hystorialLength=max(len(forbiddenWords))
+            hystorialLength=max(len(forbiddenWords)*2)
             # Diálogo por defecto
             # esto es para al final saltar  a una intraccion especial
+            if len(hystorial)>hystorialLength:
+                del hystorial[0]
             if hystorialVeredict.upper() in forbiddenWords and times < 4:
                 print("don't!\n")
                 print(game)
@@ -29,9 +31,6 @@ def al_presionar(key):
                 print("Dammit")
                 hystorial.clear()
                 times = 0
-            if len(hystorial)>hystorialLength:
-                for i in hystorial:
-                    del hystorial[i]
             print(hystorial)
             print(hystorialVeredict)
 

@@ -1,4 +1,4 @@
-rt keyboard
+import keyboard
 from sonidosSeleccion import sound
 hystorial = []
 times = 0

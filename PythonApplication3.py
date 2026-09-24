@@ -2,7 +2,7 @@ import keyboard
 from sonidosSeleccion import sound
 hystorial = []
 times = 0
-forbiddenWords = ["PORN", "MILK-CHAN", "FEMBOY","BOOPS","DICKS","COCKS"]
+forbiddenWords = ["PORN", "FEMBOY","BOOPS","DICKS","COCKS"]
 game=["dont","touch","keep","strong"]
 def al_presionar(key):
     global times, hystorial,game

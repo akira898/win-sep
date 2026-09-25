@@ -13,12 +13,12 @@ def al_presionar(key):
         
         if tecla:
             hystorial.append(tecla)
-            hystorialVeredict = "".join(hystorial)
             hystorialLength=max(len(forbiddenWords)*2)
             # Diálogo por defecto
             # esto es para al final saltar  a una intraccion especial
             if len(hystorial)>hystorialLength:
                 del hystorial[0]
+            hystorialVeredict = "".join(hystorial)
             if hystorialVeredict.upper() in forbiddenWords and times < 4:
                 print("don't!\n")
                 print(game)
